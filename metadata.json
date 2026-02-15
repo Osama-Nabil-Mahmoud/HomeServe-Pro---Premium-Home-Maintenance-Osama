@@ -1,0 +1,8 @@
+{
+  "name": "HomeServe Pro - Premium Home Maintenance",
+  "description": "A high-end landing page for home services with an integrated AI maintenance assistant.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
