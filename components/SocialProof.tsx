@@ -48,7 +48,7 @@ const SocialProof: React.FC = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white dark:bg-slate-950 transition-colors overflow-hidden">
+    <section ref={sectionRef} className="py-24 bg-slate-100 dark:bg-slate-900 transition-colors overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header & Stats Container */}
@@ -83,7 +83,7 @@ const SocialProof: React.FC = () => {
         </div>
 
         {/* Rating Summary Card */}
-        <div className="bg-slate-50 dark:bg-slate-900 rounded-[3rem] p-10 mb-20 border border-slate-100 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between text-center md:text-start transition-all">
+        <div className="bg-white dark:bg-slate-800 rounded-[3rem] p-10 mb-20 border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row items-center justify-between text-center md:text-start transition-all shadow-xl">
           <div className="mb-8 md:mb-0">
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{t.socialProof.ratingLabel}</h3>
             <div className="flex items-center justify-center md:justify-start space-x-2 rtl:space-x-reverse">
@@ -113,8 +113,8 @@ const SocialProof: React.FC = () => {
           {t.socialProof.testimonials.map((item, idx) => (
             <div 
               key={idx} 
-              className={`bg-white dark:bg-slate-900 p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-700 flex flex-col transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-              style={{ transitionDelay: `${idx * 150}ms` }}
+              className={`bg-white dark:bg-slate-800 p-8 rounded-[2rem] border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+              style={{ transitionDelay: `${idx * 100}ms` }}
             >
               <div className="flex items-center mb-6 rtl:space-x-reverse">
                 <img src={item.avatar} className="w-14 h-14 rounded-full mr-4 rtl:mr-0 rtl:ml-4 border-2 border-white dark:border-slate-700 shadow-md" alt={item.name} />

@@ -24,10 +24,13 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     }
   };
 
-  // Helper to format tel link correctly
-  const telLink = t.finalCTA.whatsappNumber.startsWith('0') 
-    ? `tel:+2${t.finalCTA.whatsappNumber}` 
-    : `tel:${t.finalCTA.whatsappNumber}`;
+  const getCleanWhatsAppLink = (number: string) => {
+    let clean = number.replace(/\D/g, '');
+    if (clean.startsWith('01')) {
+      clean = '2' + clean;
+    }
+    return `tel:${clean}`;
+  };
 
   return (
     <footer className="bg-slate-900 dark:bg-black text-white pt-20 pb-10 transition-colors">
@@ -85,7 +88,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h4 className="text-sm font-bold uppercase tracking-wider text-slate-200 mb-6">{t.nav.contact}</h4>
             <ul className="space-y-4 text-slate-400 text-sm">
               <li><a href={`mailto:${t.finalCTA.emailAddress}`} className="hover:text-white transition-colors">{t.finalCTA.emailAddress}</a></li>
-              <li><a href={telLink} className="hover:text-white transition-colors" dir="ltr">{t.finalCTA.whatsappNumber}</a></li>
+              <li><a href={getCleanWhatsAppLink(t.finalCTA.whatsappNumber)} className="hover:text-white transition-colors" dir="ltr">{t.finalCTA.whatsappNumber}</a></li>
             </ul>
           </div>
         </div>

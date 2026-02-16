@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useSettings } from '../context/SettingsContext';
+import HouseIcon from './HouseIcon'; // Import the new component
 
 interface HeroProps {
   onCtaClick: () => void;
@@ -91,31 +92,7 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           {/* Visual Content: Isometric House SVG */}
           <div className={`mt-20 lg:mt-0 relative flex justify-center lg:justify-end transition-all duration-1000 delay-300 transform ${isVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}>
             <div className="relative w-full max-w-lg aspect-square">
-              {/* Isometric House SVG */}
-              <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-[0_35px_35px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_35px_35px_rgba(0,0,0,0.4)]">
-                {/* Ground Plane */}
-                <path d="M200 350 L50 275 L200 200 L350 275 Z" className="fill-slate-200 dark:fill-slate-800 transition-colors" />
-                
-                {/* Main House Box */}
-                <path d="M100 250 L200 300 L200 180 L100 130 Z" className="fill-blue-500 dark:fill-blue-600 transition-colors" /> {/* Left Face */}
-                <path d="M200 300 L300 250 L300 130 L200 180 Z" className="fill-blue-400 dark:fill-blue-500 transition-colors" /> {/* Right Face */}
-                
-                {/* Roof */}
-                <path d="M100 130 L200 180 L200 80 L100 30 Z" className="fill-indigo-600 dark:fill-indigo-700 transition-colors" /> {/* Left Roof */}
-                <path d="M200 180 L300 130 L300 30 L200 80 Z" className="fill-indigo-500 dark:fill-indigo-600 transition-colors" /> {/* Right Roof */}
-                
-                {/* Door */}
-                <path d="M210 295 L240 280 L240 210 L210 225 Z" className="fill-slate-900 dark:fill-slate-950 transition-colors" />
-                
-                {/* Windows */}
-                <path d="M120 180 L150 165 L150 135 L120 150 Z" className="fill-white/30" />
-                <path d="M260 180 L290 165 L290 135 L260 150 Z" className="fill-white/30" />
-                
-                {/* Floating Elements / Bubbles for Tech feel */}
-                <circle cx="80" cy="100" r="10" className="fill-blue-400 animate-bounce transition-all duration-1000" />
-                <circle cx="320" cy="150" r="15" className="fill-indigo-400 animate-pulse transition-all duration-700" />
-                <circle cx="340" cy="280" r="8" className="fill-blue-300 animate-bounce animation-delay-2000 transition-all" />
-              </svg>
+              <HouseIcon />
 
               {/* Technician Arrival Float */}
               <div className="absolute -bottom-10 -left-10 rtl:left-auto rtl:-right-10 bg-white dark:bg-slate-800 p-5 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-700 max-w-[220px] -rotate-3 rtl:rotate-3 animate-float transition-colors">
@@ -143,7 +120,7 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           
           <div className="flex items-center space-x-4 rtl:space-x-reverse group">
             <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-lg group-hover:bg-blue-600 group-hover:text-white transition-all">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
             </div>
             <span className="text-sm lg:text-base font-bold text-slate-700 dark:text-slate-300">{t.hero.trustBadges.warranty}</span>
           </div>

@@ -59,7 +59,7 @@ const Steps: React.FC = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-slate-50 dark:bg-slate-950 overflow-hidden">
+    <section ref={sectionRef} className="py-24 bg-white dark:bg-slate-950 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-20 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-6">
@@ -72,22 +72,22 @@ const Steps: React.FC = () => {
 
         <div className="relative">
           {/* Connector Line (Desktop) */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-blue-100 dark:bg-slate-800 -translate-y-1/2 z-0"></div>
+          <div className="hidden lg:block absolute top-12 left-0 w-full h-1 bg-slate-200 dark:bg-slate-800"></div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative">
             {stepsData.map((step, idx) => (
               <div 
                 key={step.id} 
-                className={`flex flex-col items-center transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
-                style={{ transitionDelay: `${idx * 200}ms` }}
+                className={`group flex flex-col items-center transition-all duration-500 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+                style={{ transitionDelay: `${idx * 150}ms` }}
               >
                 <div className="relative mb-8">
                   {/* Circle Indicator */}
-                  <div className="w-24 h-24 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-xl border-4 border-blue-50 dark:border-slate-700 relative z-20 group-hover:scale-110 transition-transform">
+                  <div className="w-24 h-24 bg-slate-50 dark:bg-slate-900 border-4 border-slate-200 dark:border-slate-800 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-xl relative z-10 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-700 transition-all duration-300">
                     {step.icon}
                   </div>
                   {/* Step Number Badge */}
-                  <div className="absolute -top-2 -right-2 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-black text-lg border-4 border-slate-50 dark:border-slate-950 z-30 shadow-lg">
+                  <div className="absolute -top-2 -right-2 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-black text-lg border-4 border-white dark:border-slate-950 z-20 shadow-lg">
                     {step.id}
                   </div>
                 </div>

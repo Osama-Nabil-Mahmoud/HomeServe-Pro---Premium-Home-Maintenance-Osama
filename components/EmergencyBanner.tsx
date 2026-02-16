@@ -7,7 +7,7 @@ interface EmergencyBannerProps {
 }
 
 const EmergencyBanner: React.FC<EmergencyBannerProps> = ({ onDispatch }) => {
-  const { t, lang } = useSettings();
+  const { t } = useSettings();
 
   return (
     <section className="bg-red-600 dark:bg-red-700 py-6 relative overflow-hidden group">
@@ -30,7 +30,7 @@ const EmergencyBanner: React.FC<EmergencyBannerProps> = ({ onDispatch }) => {
             </div>
             <div>
               <h2 className="text-2xl sm:text-3xl font-black text-white leading-tight">
-                {lang === 'ar' ? 'طوارئ 24/7' : t.emergency.title}
+                {t.emergency.title}
               </h2>
               <p className="text-red-50 text-base sm:text-lg font-medium opacity-90">
                 {t.emergency.subtitle}

@@ -25,23 +25,19 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
   const firstInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    // Focus first input on mount
     firstInputRef.current?.focus();
 
-    // ESC to close
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', handleKeyDown);
 
-    // Initial category selection
     if (preselectedService) {
       const categories = Object.values(t.booking.categories);
       const match = categories.find(c => c.toLowerCase() === preselectedService.toLowerCase());
       if (match) setSelectedCategory(match);
     }
     
-    // Lock scroll
     document.body.style.overflow = 'hidden';
     
     return () => {
@@ -52,7 +48,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
 
   const handleWhatsAppAction = () => {
     if (!formData.name || !formData.address || !formData.preferredTime) {
-      alert(lang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة' : 'Please fill in all required fields');
+      alert(t.booking.fillFieldsAlert);
       return;
     }
 
@@ -89,7 +85,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
               {t.booking.title}
             </h3>
             <p className="text-slate-500 font-medium text-sm mt-1">
-              {lang === 'ar' ? 'تواصل معنا مباشرة عبر واتساب لطلب الخدمة' : 'Contact us directly via WhatsApp to request service'}
+              {t.booking.subtitle}
             </p>
           </div>
           <button 
@@ -142,7 +138,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
                 className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all"
-                placeholder={lang === 'ar' ? 'الاسم بالكامل' : 'Your full name'}
+                placeholder={t.booking.fullNamePlaceholder}
                 required 
               />
             </div>
@@ -155,7 +151,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
                 value={formData.preferredTime}
                 onChange={(e) => setFormData({...formData, preferredTime: e.target.value})}
                 className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all"
-                placeholder={lang === 'ar' ? 'مثال: الإثنين ١٠ صباحاً' : 'e.g. Monday 10AM'}
+                placeholder={t.booking.preferredTimePlaceholder}
                 required 
               />
             </div>
@@ -168,7 +164,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
                 value={formData.address}
                 onChange={(e) => setFormData({...formData, address: e.target.value})}
                 className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all"
-                placeholder={lang === 'ar' ? 'العنوان بالتفصيل (رقم المبنى، الشارع، المنطقة)' : 'Detailed address (Building, Street, Area)'}
+                placeholder={t.booking.addressPlaceholder}
                 required 
               />
             </div>
@@ -181,7 +177,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
                 value={formData.notes}
                 onChange={(e) => setFormData({...formData, notes: e.target.value})}
                 className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all resize-none"
-                placeholder={lang === 'ar' ? 'أضف أي تفاصيل إضافية هنا...' : 'Add any additional details here...'}
+                placeholder={t.booking.notesPlaceholder}
               ></textarea>
             </div>
           </div>

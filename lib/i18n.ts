@@ -174,7 +174,7 @@ export const translations = {
           name: "Elena Rodriguez",
           role: "Architect",
           content: "As someone in the industry, I have high standards. HomeServe Pro exceeded them with their attention to detail.",
-          avatar: "https://i.pravatar.cc/150?u=elena"
+          avatar: "https://i.pravatar.cc/150?u=elena-rodriguez"
         },
         {
           name: "James Taylor",
@@ -228,10 +228,16 @@ export const translations = {
     },
     booking: {
       title: 'Request Service',
+      subtitle: 'Contact us directly via WhatsApp to request service',
+      fillFieldsAlert: 'Please fill in all required fields',
       fullName: 'Full Name',
+      fullNamePlaceholder: 'Your full name',
       address: 'Detailed Address',
-      preferredTime: 'Preferred Time (e.g., Tuesday 2PM)',
+      addressPlaceholder: 'Detailed address (Building, Street, Area)',
+      preferredTime: 'Preferred Time',
+      preferredTimePlaceholder: 'e.g. Monday 10AM',
       notes: 'Additional Notes (Optional)',
+      notesPlaceholder: 'Add any additional details here...',
       selectedService: 'Service',
       selectedPlan: 'Plan',
       sendWhatsApp: 'Send via WhatsApp',
@@ -447,19 +453,19 @@ export const translations = {
       tiers: {
         basic: {
           name: 'العناية الأساسية',
-          price: '49$ - 99$',
+          price: '$49 - $99',
           desc: 'مثالي للإصلاحات السريعة والبسيطة.',
           features: ['إصلاح مشكلة واحدة', 'تشخيص أساسي بالذكاء الاصطناعي', 'ضمان لمدة 30 يوماً', 'وقت استجابة قياسي']
         },
         standard: {
           name: 'ستاندرد برو',
-          price: '129$ - 249$',
+          price: '$129 - $249',
           desc: 'أفضل قيمة للصيانة الدورية.',
           features: ['فحص نقاط متعددة', 'دعم ذكي ذو أولوية', 'ضمان لمدة 60 يوماً', 'استجابة خلال ساعتين', 'خصم 5% على قطع الغيار']
         },
         premium: {
           name: 'بريميوم إيليت',
-          price: '349$+',
+          price: '$349+',
           desc: 'راحة بال تامة للمشاريع المعقدة.',
           features: ['إصلاح شامل للنظام', 'دعم مخصص 24/7', 'ضمان لمدة 90 يوماً', 'وصول سريع خلال ساعة', 'استشارة أولية مجانية']
         }
@@ -520,7 +526,7 @@ export const translations = {
           name: "إيلينا رودريغيز",
           role: "مهندسة معمارية",
           content: "كشخص يعمل في هذا المجال، لدي معايير عالية. لقد تجاوزت هوم سيرف برو توقعاتي باهتمامهم بالتفاصيل.",
-          avatar: "https://i.pravatar.cc/150?u=elena"
+          avatar: "https://i.pravatar.cc/150?u=elena-rodriguez"
         },
         {
           name: "جيمس تايلور",
@@ -574,10 +580,16 @@ export const translations = {
     },
     booking: {
       title: 'طلب الخدمة',
+      subtitle: 'تواصل معنا مباشرة عبر واتساب لطلب الخدمة',
+      fillFieldsAlert: 'يرجى ملء جميع الحقول المطلوبة',
       fullName: 'الاسم الكامل',
+      fullNamePlaceholder: 'الاسم بالكامل',
       address: 'العنوان بالتفصيل',
-      preferredTime: 'الوقت المفضل (مثلاً: الثلاثاء الساعة ٢ مساءً)',
+      addressPlaceholder: 'العنوان بالتفصيل (رقم المبنى، الشارع، المنطقة)',
+      preferredTime: 'الوقت المفضل',
+      preferredTimePlaceholder: 'مثال: الإثنين ١٠ صباحاً',
       notes: 'ملاحظات إضافية (اختياري)',
+      notesPlaceholder: 'أضف أي تفاصيل إضافية هنا...',
       selectedService: 'الخدمة المختارة',
       selectedPlan: 'الخطة المختارة',
       sendWhatsApp: 'إرسال عبر واتساب',
@@ -676,7 +688,7 @@ export const translations = {
       tagline: 'خدمات منزلية احترافية وموثوقة ومفحوصة أمنياً في متناول يدك. من الإصلاحات الطارئة إلى الصيانة الروتينية.',
       copy: 'هوم سيرف برو لخدمات الصيانة. جميع الحقوق محفوظة.',
       madeBy: 'صنع بـ ❤️ لأصحاب المنازل العصريين.',
-      oneLiner: 'Your home deserves nothing but the best professional care.',
+      oneLiner: 'منزلك لا يستحق إلا أفضل رعاية احترافية.',
       columns: {
         company: 'الشركة',
         legal: 'القسم القانوني'
