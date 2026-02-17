@@ -95,25 +95,21 @@ export const translations = {
     pricing: {
       title: 'Simple, Transparent Pricing',
       subtitle: 'Choose a plan that fits your home maintenance needs. No hidden surprises.',
-      estimated: 'Estimated',
       mostPopular: 'Most Popular',
       cta: 'Book This Plan',
       tiers: {
         basic: {
           name: 'Basic Care',
-          price: '$49 - $99',
           desc: 'Perfect for quick fixes and minor repairs.',
           features: ['Single-issue repair', 'Basic AI Diagnosis', '30-Day Warranty', 'Standard Response Time']
         },
         standard: {
           name: 'Standard Pro',
-          price: '$129 - $249',
           desc: 'The best value for regular maintenance.',
           features: ['Multi-point inspection', 'Priority AI Support', '60-Day Warranty', '2-Hour Response Time', 'Parts discount (5%)']
         },
         premium: {
           name: 'Premium Elite',
-          price: '$349+',
           desc: 'Total peace of mind for complex projects.',
           features: ['Full system overhaul', '24/7 Dedicated Support', '90-Day Warranty', 'Express 1-Hour Arrival', 'Free initial consultation']
         }
@@ -147,40 +143,40 @@ export const translations = {
       },
       testimonials: [
         {
-          name: "Emma Davis",
+          name: "Sarah Ahmed",
           role: "New Homeowner",
           content: "Booking was so easy. The technician arrived right on time and was incredibly professional. Best service I've ever used!",
-          avatar: "https://i.pravatar.cc/150?u=emma"
-        },
-        {
-          name: "Michael Chen",
-          role: "Property Manager",
-          content: "I use HomeServe for all my rental properties. The background-checked pros give me peace of mind that my tenants are safe.",
-          avatar: "https://i.pravatar.cc/150?u=michael"
-        },
-        {
-          name: "Sarah Johnson",
-          role: "Homeowner",
-          content: "The AI assistant helped me troubleshoot a minor leak before I even called a plumber. Saved me a ton of money!",
           avatar: "https://i.pravatar.cc/150?u=sarah"
         },
         {
-          name: "David Wilson",
+          name: "Mohamed Ali",
+          role: "Property Manager",
+          content: "I use HomeServe for all my rental properties. The background-checked pros give me peace of mind that my tenants are safe.",
+          avatar: "https://i.pravatar.cc/150?u=mohamed"
+        },
+        {
+          name: "Nora El-Saeed",
+          role: "Homeowner",
+          content: "The AI assistant helped me troubleshoot a minor leak before I even called a plumber. Saved me a ton of money!",
+          avatar: "https://i.pravatar.cc/150?u=nora"
+        },
+        {
+          name: "Ahmed Mahmoud",
           role: "Small Business Owner",
           content: "Fast, reliable, and transparent pricing. I don't have to worry about hidden fees anymore. Truly professional work.",
-          avatar: "https://i.pravatar.cc/150?u=david"
+          avatar: "https://i.pravatar.cc/150?u=ahmed"
         },
         {
-          name: "Elena Rodriguez",
+          name: "Layla Hassan",
           role: "Architect",
           content: "As someone in the industry, I have high standards. HomeServe Pro exceeded them with their attention to detail.",
-          avatar: "https://i.pravatar.cc/150?u=elena-rodriguez"
+          avatar: "https://i.pravatar.cc/150?u=layla"
         },
         {
-          name: "James Taylor",
+          name: "Mahmoud Ibrahim",
           role: "Retired Veteran",
           content: "It's hard to find people you can trust these days. Every technician I've met from here has been respectful and skilled.",
-          avatar: "https://i.pravatar.cc/150?u=james"
+          avatar: "https://i.pravatar.cc/150?u=mahmoud"
         }
       ]
     },
@@ -228,16 +224,10 @@ export const translations = {
     },
     booking: {
       title: 'Request Service',
-      subtitle: 'Contact us directly via WhatsApp to request service',
-      fillFieldsAlert: 'Please fill in all required fields',
       fullName: 'Full Name',
-      fullNamePlaceholder: 'Your full name',
       address: 'Detailed Address',
-      addressPlaceholder: 'Detailed address (Building, Street, Area)',
-      preferredTime: 'Preferred Time',
-      preferredTimePlaceholder: 'e.g. Monday 10AM',
+      preferredTime: 'Preferred Time (e.g., Tuesday 2PM)',
       notes: 'Additional Notes (Optional)',
-      notesPlaceholder: 'Add any additional details here...',
       selectedService: 'Service',
       selectedPlan: 'Plan',
       sendWhatsApp: 'Send via WhatsApp',
@@ -447,25 +437,21 @@ export const translations = {
     pricing: {
       title: 'تسعير بسيط وشفاف',
       subtitle: 'اختر الخطة التي تناسب احتياجات صيانة منزلك. لا توجد مفاجآت خفية.',
-      estimated: 'تقديري',
       mostPopular: 'الأكثر طلباً',
       cta: 'احجز هذه الخطة',
       tiers: {
         basic: {
           name: 'العناية الأساسية',
-          price: '$49 - $99',
           desc: 'مثالي للإصلاحات السريعة والبسيطة.',
           features: ['إصلاح مشكلة واحدة', 'تشخيص أساسي بالذكاء الاصطناعي', 'ضمان لمدة 30 يوماً', 'وقت استجابة قياسي']
         },
         standard: {
           name: 'ستاندرد برو',
-          price: '$129 - $249',
           desc: 'أفضل قيمة للصيانة الدورية.',
           features: ['فحص نقاط متعددة', 'دعم ذكي ذو أولوية', 'ضمان لمدة 60 يوماً', 'استجابة خلال ساعتين', 'خصم 5% على قطع الغيار']
         },
         premium: {
           name: 'بريميوم إيليت',
-          price: '$349+',
           desc: 'راحة بال تامة للمشاريع المعقدة.',
           features: ['إصلاح شامل للنظام', 'دعم مخصص 24/7', 'ضمان لمدة 90 يوماً', 'وصول سريع خلال ساعة', 'استشارة أولية مجانية']
         }
@@ -499,40 +485,40 @@ export const translations = {
       },
       testimonials: [
         {
-          name: "إيما ديفيس",
+          name: "سارة أحمد",
           role: "صاحبة منزل جديدة",
           content: "كان الحجز سهلاً للغاية. وصل الفني في الوقت المحدد تماماً وكان محترفاً للغاية. أفضل خدمة استخدمتها على الإطلاق!",
-          avatar: "https://i.pravatar.cc/150?u=emma"
-        },
-        {
-          name: "مايكل تشن",
-          role: "مدير عقارات",
-          content: "أستخدم هوم سيرف لجميع عقاراتي المؤجرة. المحترفون المفحوصون يمنحونني راحة البال بأن المستأجرين في أمان.",
-          avatar: "https://i.pravatar.cc/150?u=michael"
-        },
-        {
-          name: "سارة جونسون",
-          role: "صاحبة منزل",
-          content: "ساعدني مساعد هوم سيرف برو في حل مشكلة تسرب بسيط قبل أن أتصل بالسباك. وفر لي الكثير من المال!",
           avatar: "https://i.pravatar.cc/150?u=sarah"
         },
         {
-          name: "داود ويلسون",
+          name: "محمد علي",
+          role: "مدير عقارات",
+          content: "أستخدم هوم سيرف لجميع عقاراتي المؤجرة. المحترفون المفحوصون يمنحونني راحة البال بأن المستأجرين في أمان.",
+          avatar: "https://i.pravatar.cc/150?u=mohamed"
+        },
+        {
+          name: "نورا السعيد",
+          role: "صاحبة منزل",
+          content: "ساعدني مساعد هوم سيرف برو في حل مشكلة تسرب بسيط قبل أن أتصل بالسباك. وفر لي الكثير من المال!",
+          avatar: "https://i.pravatar.cc/150?u=nora"
+        },
+        {
+          name: "أحمد محمود",
           role: "صاحب عمل صغير",
           content: "تسعير سريع وموثوق وشفاف. لا داعي للقلق بشأن الرسوم المخفية بعد الآن. عمل احترافي حقاً.",
-          avatar: "https://i.pravatar.cc/150?u=david"
+          avatar: "https://i.pravatar.cc/150?u=ahmed"
         },
         {
-          name: "إيلينا رودريغيز",
+          name: "ليلى حسن",
           role: "مهندسة معمارية",
           content: "كشخص يعمل في هذا المجال، لدي معايير عالية. لقد تجاوزت هوم سيرف برو توقعاتي باهتمامهم بالتفاصيل.",
-          avatar: "https://i.pravatar.cc/150?u=elena-rodriguez"
+          avatar: "https://i.pravatar.cc/150?u=layla"
         },
         {
-          name: "جيمس تايلور",
+          name: "محمود إبراهيم",
           role: "محارب قديم متقاعد",
           content: "من الصعب العثور على أشخاص يمكنك الوثوق بهم هذه الأيام. كل فني قابلته هنا كان محترماً وماهراً.",
-          avatar: "https://i.pravatar.cc/150?u=james"
+          avatar: "https://i.pravatar.cc/150?u=mahmoud"
         }
       ]
     },
@@ -552,7 +538,7 @@ export const translations = {
     },
     ai: {
       title: 'نصيحة الخبراء،',
-      titleAccent: 'فوراً.',
+      titleAccent: 'Instانت.',
       desc: 'لست متأكدًا مما إذا كنت بحاجة إلى محترف؟ تم تدريب مساعدنا الذكي على آلاف سيناريوهات الصيانة المنزلية لتقديم إرشادات فورية وتقديرات للتكلفة.',
       feature1Title: 'تشخيص آمن',
       feature1Desc: 'تعرف بالضبط متى يمكنك القيام بذلك بنفسك ومتى يجب استدعاء الخبراء.',
@@ -580,16 +566,10 @@ export const translations = {
     },
     booking: {
       title: 'طلب الخدمة',
-      subtitle: 'تواصل معنا مباشرة عبر واتساب لطلب الخدمة',
-      fillFieldsAlert: 'يرجى ملء جميع الحقول المطلوبة',
       fullName: 'الاسم الكامل',
-      fullNamePlaceholder: 'الاسم بالكامل',
       address: 'العنوان بالتفصيل',
-      addressPlaceholder: 'العنوان بالتفصيل (رقم المبنى، الشارع، المنطقة)',
-      preferredTime: 'الوقت المفضل',
-      preferredTimePlaceholder: 'مثال: الإثنين ١٠ صباحاً',
+      preferredTime: 'الوقت المفضل (مثلاً: الثلاثاء الساعة ٢ مساءً)',
       notes: 'ملاحظات إضافية (اختياري)',
-      notesPlaceholder: 'أضف أي تفاصيل إضافية هنا...',
       selectedService: 'الخدمة المختارة',
       selectedPlan: 'الخطة المختارة',
       sendWhatsApp: 'إرسال عبر واتساب',
@@ -688,7 +668,7 @@ export const translations = {
       tagline: 'خدمات منزلية احترافية وموثوقة ومفحوصة أمنياً في متناول يدك. من الإصلاحات الطارئة إلى الصيانة الروتينية.',
       copy: 'هوم سيرف برو لخدمات الصيانة. جميع الحقوق محفوظة.',
       madeBy: 'صنع بـ ❤️ لأصحاب المنازل العصريين.',
-      oneLiner: 'منزلك لا يستحق إلا أفضل رعاية احترافية.',
+      oneLiner: 'منزلك يستحق أفضل رعاية مهنية على الإطلاق.',
       columns: {
         company: 'الشركة',
         legal: 'القسم القانوني'

@@ -25,19 +25,24 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
   const firstInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    // Focus first input on mount
     firstInputRef.current?.focus();
 
+    // ESC to close
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', handleKeyDown);
 
+    // Initial category selection
     if (preselectedService) {
-      const categories = Object.values(t.booking.categories);
+      // Fix: Cast categories to string[] to resolve 'unknown' type error for toLowerCase()
+      const categories = Object.values(t.booking.categories) as string[];
       const match = categories.find(c => c.toLowerCase() === preselectedService.toLowerCase());
       if (match) setSelectedCategory(match);
     }
     
+    // Lock scroll
     document.body.style.overflow = 'hidden';
     
     return () => {
@@ -48,7 +53,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
 
   const handleWhatsAppAction = () => {
     if (!formData.name || !formData.address || !formData.preferredTime) {
-      alert(t.booking.fillFieldsAlert);
+      alert(lang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة' : 'Please fill in all required fields');
       return;
     }
 
@@ -85,7 +90,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
               {t.booking.title}
             </h3>
             <p className="text-slate-500 font-medium text-sm mt-1">
-              {t.booking.subtitle}
+              {lang === 'ar' ? 'تواصل معنا مباشرة عبر واتساب لطلب الخدمة' : 'Contact us directly via WhatsApp to request service'}
             </p>
           </div>
           <button 
@@ -111,7 +116,8 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full bg-transparent font-bold text-slate-900 dark:text-white outline-none cursor-pointer"
               >
-                {Object.values(t.booking.categories).map(cat => (
+                {/* Fix: cast Object.values to string[] to ensure 'cat' is typed as string */}
+                {(Object.values(t.booking.categories) as string[]).map(cat => (
                   <option key={cat} value={cat}>{cat}</option>
                 ))}
               </select>
@@ -138,7 +144,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
                 className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all"
-                placeholder={t.booking.fullNamePlaceholder}
+                placeholder={lang === 'ar' ? 'الاسم بالكامل' : 'Your full name'}
                 required 
               />
             </div>
@@ -151,7 +157,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
                 value={formData.preferredTime}
                 onChange={(e) => setFormData({...formData, preferredTime: e.target.value})}
                 className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all"
-                placeholder={t.booking.preferredTimePlaceholder}
+                placeholder={lang === 'ar' ? 'مثال: الإثنين ١٠ صباحاً' : 'e.g. Monday 10AM'}
                 required 
               />
             </div>
@@ -164,7 +170,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
                 value={formData.address}
                 onChange={(e) => setFormData({...formData, address: e.target.value})}
                 className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all"
-                placeholder={t.booking.addressPlaceholder}
+                placeholder={lang === 'ar' ? 'العنوان بالتفصيل (رقم المبنى، الشارع، المنطقة)' : 'Detailed address (Building, Street, Area)'}
                 required 
               />
             </div>
@@ -177,7 +183,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose, preselectedService, 
                 value={formData.notes}
                 onChange={(e) => setFormData({...formData, notes: e.target.value})}
                 className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-2xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all resize-none"
-                placeholder={t.booking.notesPlaceholder}
+                placeholder={lang === 'ar' ? 'أضف أي تفاصيل إضافية هنا...' : 'Add any additional details here...'}
               ></textarea>
             </div>
           </div>
